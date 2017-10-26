@@ -1,0 +1,101 @@
+{
+  "name": "s-and-p-500",
+  "title": "Standard and Poor's (S&P) 500 Index Data including Dividend, Earnings and P/E Ratio",
+  "licenses": [
+    {
+      "id": "odc-pddl",
+      "name": "public_domain_dedication_and_license",
+      "version": "1.0",
+      "url": "http://opendatacommons.org/licenses/pddl/1.0/"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Robert Shiller",
+      "web": "http://www.econ.yale.edu/~shiller/data.htm",
+      "title": "Robert Shiller"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Rufus Pollock",
+      "email": "rufus.pollock@okfn.org"
+    }
+  ],
+  "keywords": [
+    "Indicator",
+    "Economics",
+    "Prices",
+    "Stocks",
+    "Stock Market",
+    "US"
+  ],
+  "resources": [
+    {
+      "path": "data/data.csv",
+      "schema": {
+        "fields": [
+          {
+            "type": "date",
+            "name": "Date",
+            "format": "any"
+          },
+          {
+            "type": "number",
+            "description": "Level ('price') of the S&P 500 index",
+            "name": "SP500"
+          },
+          {
+            "type": "number",
+            "name": "Dividend"
+          },
+          {
+            "type": "number",
+            "name": "Earnings"
+          },
+          {
+            "type": "number",
+            "name": "Consumer Price Index"
+          },
+          {
+            "type": "number",
+            "description": "10 year interest rate (gov bonds)",
+            "name": "Long Interest Rate"
+          },
+          {
+            "type": "number",
+            "name": "Real Price"
+          },
+          {
+            "type": "number",
+            "name": "Real Dividend"
+          },
+          {
+            "type": "number",
+            "name": "Real Earnings"
+          },
+          {
+            "type": "number",
+            "description": "Cyclically Adjusted Price Earnings Ratio P/E10 or CAPE",
+            "name": "PE10"
+          }
+        ]
+      },
+      "name": "data"
+    }
+  ],
+  "views": [
+    {
+      "name": "graph",
+      "title": "Level ('price') of the S&P 500 index",
+      "specType": "simple",
+      "spec": {
+        "type": "line",
+        "group": "Date",
+        "series": [
+          "SP500"
+        ]
+      }
+    }
+  ]
+}
